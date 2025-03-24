@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online tools to simplify your work! Generate QR codes, barcodes, compress images, shorten links, and more. 100% free and easy to use.">
+  <meta name="keywords" content="free tools, QR code generator, barcode generator, image compressor, link shortener, online tools">
+  <meta name="author" content="FreeTools">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://example.com">
+  <title>Free Tools Website - Simplify Your Work with Free Online Tools</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      background: #333;
+      color: #fff;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* Logo aligned to the left */
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: #007BFF;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero .cta-button {
+      background: #fff;
+      color: #007BFF;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* Popular Tools Section */
+    .popular-tools {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .popular-tools h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .tool-card {
+      background: #f4f4f4;
+      padding: 30px 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 250px; /* Increased height */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-10px); /* Pop-up effect */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    }
+
+    .tool-card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .tool-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .tool-card .use-now-button {
+      background: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .tool-card .use-now-button:hover {
+      background: #005bb5;
+    }
+
+    /* More Tools Button */
+    .more-tools-button {
+      margin-top: 40px;
+    }
+
+    .more-tools-button a {
+      background: #007BFF;
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .more-tools-button a:hover {
+      background: #005bb5;
+    }
+
+    /* How It Works Section */
+    .how-it-works {
+      background: #f4f4f4;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .how-it-works h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .step {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .step img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 20px;
+    }
+
+    .step h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      font-size: 16px;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      margin-bottom: 20px;
+    }
+
+    footer .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer .social-media img {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .tool-grid, .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Ad Space */
+    .ad-space {
+      margin: 20px 0;
+      padding: 20px;
+      background: #f4f4f4;
+      text-align: center;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="#" class="logo">FreeTools</a>
+    </div>
+  </header>
+
+  <!-- Ad Space -->
+  <div class="ad-space container">
+    <!-- Add your ad code here -->
+    <p>Ad Space (320x100)</p>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Free Online Tools to Simplify Your Work!</h1>
+      <p>Generate QR codes, barcodes, compress images, shorten links, and more – 100% free and easy to use!</p>
+      <a href="#tools" class="cta-button">Explore Tools</a>
+    </div>
+  </section>
+
+  <!-- Popular Tools Section -->
+  <section id="tools" class="popular-tools">
+    <div class="container">
+      <h2>Popular Tools</h2>
+      <div class="tool-grid">
+        <div class="tool-card">
+          <h3>QR Code Generator</h3>
+          <p>Create custom QR codes for websites, contact info, and more.</p>
+          <a href="https://example.com/qr-generator" class="use-now-button">Use Now</a>
+        </div>
+        <div class="tool-card">
+          <h3>Barcode Generator</h3>
+          <p>Generate barcodes for products, inventory, and more.</p>
+          <a href="https://example.com/barcode-generator" class="use-now-button">Use Now</a>
+        </div>
+        <div class="tool-card">
+          <h3>Image Compressor</h3>
+          <p>Compress images without losing quality for faster loading.</p>
+          <a href="https://example.com/image-compressor" class="use-now-button">Use Now</a>
+        </div>
+        <div class="tool-card">
+          <h3>Link Shortener</h3>
+          <p>Shorten long URLs into compact, shareable links.</p>
+          <a href="https://example.com/link-shortener" class="use-now-button">Use Now</a>
+        </div>
+      </div>
+      <!-- More Tools Button -->
+      <div class="more-tools-button">
+        <a href="https://example.com/more-tools">More Tools</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <img src="choose-icon.png" alt="Choose Tool Icon">
+          <h3>Choose a Tool</h3>
+          <p>Select from our wide range of free tools.</p>
+        </div>
+        <div class="step">
+          <img src="input-icon.png" alt="Input Data Icon">
+          <h3>Input Your Data</h3>
+          <p>Enter the required information (e.g., URL, text, or image).</p>
+        </div>
+        <div class="step">
+          <img src="result-icon.png" alt="Get Results Icon">
+          <h3>Get Results</h3>
+          <p>Instantly generate, convert, or compress your files.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="social-media">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+      </div>
+      <p>&copy; 2023 FreeTools. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Add interactivity if needed
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Website loaded!');
+    });
+  </script>
+</body>
+  </html>
